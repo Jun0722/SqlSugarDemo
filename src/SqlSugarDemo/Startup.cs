@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SqlSugarDemo.IRepository;
+using SqlSugarDemo.Repository;
 
 namespace SqlSugarDemo
 {
@@ -31,6 +33,7 @@ namespace SqlSugarDemo
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddTransient<IUserInfoRepository, UserInfoRepository>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

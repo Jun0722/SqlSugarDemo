@@ -6,6 +6,19 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="sqlSugarCore" Version="4.6.4.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="IRepository\" />
+    <Folder Include="Repository\" />
+    <Folder Include="Models\pagination\" />
+    <Folder Include="Data\" />
+    <Folder Include="Repository\" />
+    <Folder Include="Views\UserInfo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Repository\Repository.cs" />
+  </ItemGroup>
 </Project>
